@@ -1,9 +1,12 @@
 import { app } from '@azure/functions';
 
 app.http('message', {
-  methods: ['GET', 'POST'],
+  methods: ['GET'],
   authLevel: 'anonymous',
   handler: async (request, context) => {
-    return { body: JSON.stringify({ text: "Hello from Azure Functions!" }) };
+    return {
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: "Hello from Azure!" })
+    };
   }
 });
