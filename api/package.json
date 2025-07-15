@@ -1,7 +1,6 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "main": "index.js",
   "type": "module",
   "dependencies": {
     "@azure/functions": "^4.0.0"
